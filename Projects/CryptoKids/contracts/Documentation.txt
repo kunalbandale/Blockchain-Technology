@@ -1,0 +1,56 @@
+License-Identifier: Unlincensed
+
+pragma solidity ^0.8.7;
+
+
+
+DataTypes in Solidity
+    uint amountOfMoney
+    bool isTotal
+    string 'hello'
+    address walletAddress
+    
+msg - current message received by the contract 
+
+msg.sender; // address of the sender
+msg.value; // amount of ether provided to this contact in the wei, the function should be marked "payable"
+msg.data; // bytes , complete call data
+msg.gas; // remaining gas
+
+
+ // Arrays in Solidity
+
+ // static array  
+   uint[5] names;
+   
+// dynamic array
+    uint[] names;
+// add items to array
+    names.push("Kunal");
+    names[1] = "Patil";
+    delete  names("Patil")
+
+mapping (string => uint) public kids
+
+// struct 
+// functions
+
+// gas use
+view
+pure
+
+   for (uint i = 0; i < kids.length;i++) {
+            if(kids[i].walletAddress == walletAddress) {
+                kids[i].amount += msg.value;
+            }
+        }
+
+require()
+modifier _;
+
+events in solidity 
+
+event LogkidFundingReceived(address addr , uint amount , uint contractBalance);
+emit 
+
+
